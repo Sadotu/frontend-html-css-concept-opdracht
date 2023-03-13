@@ -25,6 +25,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 button {
     padding: 15px 30px;
     border-radius: 30px;
