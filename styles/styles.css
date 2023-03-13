@@ -1,0 +1,385 @@
+/* ------------------------------- 0. Imports -------------------------------- */
+@import url('../fonts/Merriweather');
+@import url('../fonts/Roboto');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+    4. Areas
+        4.1 Header
+        4.2 Main Section 1
+        4.3 Main Section 2
+        4.4 Main Section 3
+        4.5 Footer
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--button-color);
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+.subtitle {
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+:root {
+    --button-color: #ED4385;
+    --blue-color: rgba(72,69,228,1);
+    --gradient-color: rgba(87,34,205,1);
+    --purple-color: #5722CD;
+}
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, var(--blue-color) 15%, var(--gradient-color) 90%);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    align-self: flex-end;
+}
+
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    list-style: none;
+}
+
+.introduction {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.introduction * + * {
+    margin-top: 20px;
+}
+
+.squiggly-line-stripe {
+    height: 100px;
+    width: 79px;
+    background-image: url('../assets/squiggle_line_stripe.svg');
+}
+
+/* --------------- 4.2 Main Section 1 ------------------- */
+
+.outer-container-pitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.inner-container-pitch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: 20px;
+}
+
+.pitch {
+    text-align: center;
+    color: var(--blue-color);
+    font-weight: 500;
+}
+
+.pitch-question {
+    margin-top: 80px;
+    font-size: 12px;
+}
+
+.pitch-question-link {
+    color: var(--blue-color);
+}
+/* --------------- 4.3 Main Section 2 ------------------- */
+
+.outer-container-portfolio {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #F3F6F9;
+    margin-top: 50px;
+    padding: 50px 50px 0 50px;
+}
+
+.inner-container-portfolio {
+    flex: 0 1 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;;
+}
+
+.portfolio-inner-content {
+    flex: 0 0 500px;
+    padding: 50px 0;
+    padding-left: 150px;
+}
+
+.portfolio-inner-content p {
+    padding: 30px 30px 30px 0;
+}
+
+.portfolio-head {
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.portfolio-squiggly-line-img {
+    width: 40px;
+    height: 4px;
+}
+
+.portfolio-text {
+    font-size: 12px;
+    width: 70%;
+}
+
+.portfolio-link {
+    color: var(--purple-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.portfolio-span {
+    width: 100%;
+    flex: 0 1 800px;
+}
+
+.portfolio-img {
+    width: 100%;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-image {
+    flex: 0 1 100%;
+}
+
+/* --------------- 4.4 Main Section 3 ------------------- */
+
+.outer-services-container {
+    display: flex;
+    justify-content: center;
+}
+
+.inner-services-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 1 1000px;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.web-design {
+    border: 1px solid var(--purple-color);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.web-design-icon {
+    height: 50px;
+    display: flex;
+    align-self: flex-start;
+}
+
+.web-design-head {
+    color: var(--purple-color);
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.web-design-text {
+    font-size: 12px;
+    opacity: 50%;
+}
+
+/* --------------- 4.5 Footer ------------------------- */
+
+.outer-container-footer {
+    background-color: var(--gradient-color);
+}
+
+.inner-container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px 0 50px;
+}
+
+.footer-head {
+    margin-bottom: 30px;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 50px;
+}
+
+.footer-label {
+    color: white;
+    font-size: 12px;
+}
+
+.footer-form-input {
+    margin-bottom: 25px;
+    height: 40px;
+}
+
+.footer-button {
+    width: 150px;
+    margin: 50px;
+}
+
+.footer-footer {
+    height: 50px;
+    background-color: black;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-footer-text {
+    color: white;
+    font-size: 10px;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media (max-width: 600px) {
+    nav {
+        align-self: center;
+    }
+    .nav-ul {
+        text-align: center;
+    }
+
+    .introduction {
+        width: 90%;
+        padding: 5px;
+    }
+
+    .button-header {
+        margin-bottom: 50px;
+    }
+
+    .inner-container-pitch {
+        width: 90%;
+    }
+
+    .inner-services-container {
+        flex: 0 1 300px;
+    }
+
+    .footer-button {
+        margin: 0 0 50px 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .portfolio-content {
+        flex-direction: column;
+    }
+
+    .portfolio-content {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .portfolio-image {
+        order: -1;
+    }
+
+    .portfolio-inner-content {
+        flex: 0 0 0;
+        padding-left: 0;
+    }
+
+    .portfolio-text {
+        width: 100%;
+    }
+
+    .inner-services-container {
+        margin-left: 15px;
+    }
+
+    .footer-form {
+        width: 90%;
+    }
+}
