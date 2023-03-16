@@ -135,7 +135,7 @@ een duidelijk plan voor jezelf over hoe je dit gaat aanpakken.
 </span>
 ```
 
-![image-screenshot](./assets/screenshots/image-screenshot.gif)
+![image-screenshot](assets/screenshots/image-screenshot.gif)
 
 Vervolgens geven we de afbeelding altijd een `width: 100%`, zodat ze altijd 100% van de *beschikbare ruimte* zullen
 innemen. Het wrapper-element krijgt vervolgens een maximale breedte mee (doormiddel van `max-width` of `flex-basis`),
@@ -208,7 +208,7 @@ aandachtspunten goed door en maak een duidelijk plan voor jezelf over hoe je dit
    Lees [hier](https://css-tricks.com/perfect-full-page-background-image/) meer over de `background-image` property.
 6. Zorg ervoor dat er een transitie ontstaat wanneer de gebruiker over de project-links hovert *(EdHub Hfst. 9.5)*:
 
-![bonus-moving-link](./assets/screenshots/bonus/bonus-moving-link.gif)
+![bonus-moving-link](assets/screenshots/bonus/bonus-moving-link.gif)
 
 ## Schermontwerpen
 
