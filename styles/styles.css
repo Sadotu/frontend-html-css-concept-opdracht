@@ -156,7 +156,7 @@ nav {
 /* --------------- 4.3 Main Section 2 ------------------- */
 
 .outer-container-portfolio {
-    width: 100%;
+    width: 102%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -239,6 +239,8 @@ nav {
     gap: 30px;
     margin: 50px 0;
 }
+
+
 
 .web-design {
     border: 1px solid var(--purple-color);
@@ -432,20 +434,23 @@ nav {
     top: 50px;
 }
 
-.inner-services-container {
+.outer-services-container {
     position: relative;
 }
 
-.inner-services-container::before {
+.outer-services-container::before {
     content: "services";
     font-weight: 700;
     position: absolute;
     font-size: 20em;
     color: var(--purple-color);
-    z-index: -1;
+    z-index: 0;
     opacity: 0.1;
-    top: -200px;
-    left: -100px;
+    top: 0;
+}
+
+.web-design {
+    background-color: white;
 }
 
 /*Opdracht 4*/
@@ -508,4 +513,45 @@ footer {
 
 .portfolio-link:hover::after {
     width: 50px;
+}
+
+/* ------------------------------- 6.1 Bonus media query -------------------------------- */
+
+@media (max-width: 1350px) {
+    .outer-container-pitch::before,
+    .outer-container-portfolio::before,
+    .outer-services-container::before {
+        font-size: 15em;
+    }
+}
+
+@media (max-width: 1200px) {
+    .outer-container-pitch::before,
+    .outer-container-portfolio::before,
+    .outer-services-container::before {
+        font-size: 12em;
+    }
+}
+
+@media (max-width: 900px) {
+    .outer-container-pitch::before,
+    .outer-container-portfolio::before,
+    .outer-services-container::before {
+        font-size: 9em;
+    }
+}
+
+@media (max-width: 700px) {
+    .outer-container-pitch::before,
+    .outer-container-portfolio::before,
+    .outer-services-container::before {
+        font-size: 8em;
+    }
+}
+@media (max-width: 500px) {
+    .outer-container-pitch::before,
+    .outer-container-portfolio::before,
+    .outer-services-container::before {
+        font-size: 5em;
+    }
 }
